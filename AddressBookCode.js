@@ -72,7 +72,7 @@ function contactDetails(firstName,lastName,address,state,city,zipCode,email,phon
 }
 
 //UC3 
-contactDetails('Archi', 'Agarwal', 'Home', 'Uttar Pradesh', 'Agra', "282002", 'Agarwal@gmail.com', "9999999999");
+contactDetails('Archi', 'Agarwal', 'Home', 'Uttar Pradesh', 'Agra', "282002", 'Archi@gmail.com', "9999999999");
 console.log(addressBook);
 
 //UC4
@@ -112,5 +112,20 @@ function editContact(findName,editedVariable,variableNewValue){
                 }
             }
         })
+    }
+}
+//UC5
+
+//method to delete
+function deleteContact(first_Name){
+    if(addressBook.length == null){
+        console.log("Add Contact In Address Book");
+    }else{
+        for(let i = 0; i <addressBook.length ; i++){
+            if(addressBook[i].firstName == first_Name){
+                addressBook.splice(i,1);
+                console.log("Contact Deleted Successfully");
+            }
+        }
     }
 }
